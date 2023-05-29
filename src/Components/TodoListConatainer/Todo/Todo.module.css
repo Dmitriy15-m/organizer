@@ -1,0 +1,133 @@
+.todo_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr ;
+  grid-template-rows: 0.5fr 1fr ;
+  grid-template-areas:
+    '. time_block  conditionTodo '
+    'strikethrough todo_info delTodo'
+    ;
+  border: 1px solid #f0a500;
+  border-radius: 10px;
+
+  padding: 5px;
+  margin: 5px;
+}
+
+.strikethrough {
+  cursor: pointer;
+  width: 16px;
+  justify-self: center;
+  grid-area: strikethrough;
+}
+
+div[id='todo_info'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: scroll;
+  overflow-y: hidden;
+  grid-area: todo_info;
+}
+
+.time_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: time_block;
+}
+
+div[id='conditionTodo'] {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  justify-self: end;
+  width: 66px;
+  grid-area: conditionTodo;
+}
+
+.dellTodo {
+  margin-top: 5px;
+  justify-self: center;
+  grid-area: delTodo;
+}
+
+
+.todo_name {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
+}
+
+.todo_start {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: small;
+  padding-right: 7px;
+  color: #64b4f6;
+}
+
+.todo_end {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: small;
+  color: #64b4f6;
+}
+
+.todo_container img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.strikethrough:checked + div {
+  text-decoration: line-through;
+}
+
+.pastTime:not(.strikethrough:checked + div) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: rgb(206, 56, 56);
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 0px 3px;
+  height: 19px;
+}
+
+.presentTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: #14a55f;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 0px 3px;
+  height: 19px;
+}
+
+.featureTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: #477dfa;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 0px 3px;
+  height: 19px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(245, 244, 242, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 212, 212);
+  border-radius: 10px;
+  height: 4px;
+}

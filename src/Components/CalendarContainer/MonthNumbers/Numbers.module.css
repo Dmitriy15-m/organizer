@@ -1,0 +1,41 @@
+.calendar__td {
+  padding: 5px;
+}
+
+.calendar__td span {
+  display: block;
+  width: 100%;
+}
+
+.calendar__td_duringDay {
+  background: #64b4f6;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.calendar__span_duringDay {
+  color: #ffff;
+}
+
+.calendar__span_otherDays {
+  color: gray;
+}
+
+.calendar__todosDays {
+  background: #f0a500;
+  color: #ffff;
+  border-radius: 20px;
+}
+
+.restAndTodos {
+  color: #f0a500;
+}
+
+.red:not(.calendar__span_otherDays):not(.calendar__span_duringDay):not(.restAndTodos) {
+  color: red;
+}
+
+
+.calendar__td span:not(.calendar__span_otherDays) {
+  cursor: pointer;
+}

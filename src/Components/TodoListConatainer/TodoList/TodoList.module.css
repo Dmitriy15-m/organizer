@@ -1,0 +1,22 @@
+.list_container {
+  display: grid;
+  grid-template-rows: 20px 2fr;
+  margin-top: 10px;
+}
+
+.editInput {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.list_container input[id='input']:focus {
+  border: 1px solid #f0a500;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  justify-self: center;
+  width: 200px;
+}
+
+
