@@ -53,8 +53,9 @@ const Todo: React.FC<IProps> = ({ isTodoInList, hadleRemoveTodo, isChecked, titl
           className={styles.todo_start}
           ref={spanStart}
           onDoubleClick={() => editHandler(spanStart, 'start')}>
-          {title.start}
+          {title.start} <span>-</span>
         </span>
+       
         <span
           className={styles.todo_end}
           ref={spanEnd}

@@ -30,7 +30,7 @@ const TodoListContainer: React.FC = () => {
     <div className={styles.block}>
       <div className={styles.block__content}>
         <Header days={days} {...clickDate} />
-        <TodoForm clickDate={clickDate} />
+        <TodoForm/>
         <TodoList
           isTodoInList={isTodoInList}
           hadleRemoveTodo={hadleRemoveTodo}
